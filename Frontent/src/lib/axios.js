@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.MODE === "development" ? "http://localhost:3000/api" : "https://your-blog-4xnf.onrender.com/api",
+  baseURL: import.meta.mode === "development" ? "http://localhost:3000/api" : "/api",
   withCredentials:true
 })
 

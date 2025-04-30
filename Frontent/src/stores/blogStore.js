@@ -55,9 +55,9 @@ export const blogStor = create((set, get) => ({
     set({ loading: true });
     try {
       const url =
-        import.meta.env.MODE === "development"
+        import.meta.env.mode === "development"
           ? `http://localhost:3000/api/auth/single-page/${id}`
-          : `https://your-blog-4xnf.onrender.com/api/auth/single-page/${id}`;
+          : `/api/auth/single-page/${id}`;
 
       const res = await axios.get(url, { withCredentials: true });
       // console.log("ressss: ",res);
@@ -83,9 +83,9 @@ export const blogStor = create((set, get) => ({
     try {
       // console.log('delete ',id);
       const url =
-      import.meta.env.MODE === "development"
+      import.meta.env.mode === "development"
         ? `http://localhost:3000/api/auth/${id}`
-        : `https://your-blog-4xnf.onrender.com/api/auth/${id}`; // ✅ corrected
+        : `/api/auth/${id}`; // ✅ corrected
       
       
       const res =  await axios.delete(url, {withCredentials:true});
@@ -102,9 +102,9 @@ export const blogStor = create((set, get) => ({
 
   addComment: async (id, blogId, message) => {
     try {
-      const url = import.meta.env.MODE === "development"
+      const url = import.meta.env.mode === "development"
         ? `http://localhost:3000/api/auth/comment`
-        : `https://your-blog-4xnf.onrender.com/api/auth/comment`;
+        : `/api/auth/comment`;
   
       const response = await axios.post(
         url,
@@ -122,9 +122,9 @@ export const blogStor = create((set, get) => ({
   deleteComment: async (commentId) => {
     try {
       const url =
-        import.meta.env.MODE === "development"
+        import.meta.env.mode === "development"
           ? `http://localhost:3000/api/auth/comment/${commentId}`
-          : `https://your-blog-4xnf.onrender.com/api/auth/comment/${commentId}`;
+          : `/api/auth/comment/${commentId}`;
 
       const response = await axios.delete(url, {
         withCredentials: true,

@@ -14,7 +14,7 @@ const app = express();
 
 
 app.use(cors({
-  origin:"https://your-blog-two.vercel.app/",  // ✅ match frontend port
+  origin: process.env.FRONTEND_URL || " http://localhost:5173/",  // ✅ match frontend port
   credentials: true
 }));
 app.use(express.json());
