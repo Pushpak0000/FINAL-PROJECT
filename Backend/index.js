@@ -14,7 +14,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || " http://localhost:5173/",  // ✅ match frontend port
+  origin:"https://final-project-ruby-phi.vercel.app/",  // ✅ match frontend port
   credentials: true,
 }));
 app.use(express.json());
