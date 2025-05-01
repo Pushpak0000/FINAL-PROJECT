@@ -70,6 +70,7 @@ export const login = async(req,res) =>{
     const options = {
       httpOnly: true,
       secure: true,
+      sameSite: "None"
     };
 
    return res
@@ -105,7 +106,7 @@ export const logout = async (req,res) =>{
     const options = {
       httpOnly: true,
       secure: true,
-      // sameSite: "None", // Required for cross-origin cookies
+      sameSite: "None", // Required for cross-origin cookies
     };
 
     res
@@ -162,7 +163,7 @@ export const refereshAccessToken = async (req,res) =>{
     const options = {
       httpOnly:true,
       secure:true,
-      sameSite: "Strict"
+      sameSite: "None"
     }
   
     const { accessToken, refreshToken } =  await generateAccessAndRefereshToken(user._id);
