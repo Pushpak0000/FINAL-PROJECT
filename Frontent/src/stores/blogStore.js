@@ -57,7 +57,7 @@ export const blogStor = create((set, get) => ({
       const url =
         import.meta.env.mode === "development"
           ? `http://localhost:3000/api/auth/single-page/${id}`
-          : `/api/auth/single-page/${id}`;
+          : `https://final-project-z6j6.onrender.com/api/auth/single-page/${id}`;
 
       const res = await axios.get(url, { withCredentials: true });
       // console.log("ressss: ",res);
@@ -85,7 +85,7 @@ export const blogStor = create((set, get) => ({
       const url =
       import.meta.env.mode === "development"
         ? `http://localhost:3000/api/auth/${id}`
-        : `/api/auth/${id}`; // ✅ corrected
+        : `https://final-project-z6j6.onrender.com/api/auth/${id}`; // ✅ corrected
       
       
       const res =  await axios.delete(url, {withCredentials:true});
@@ -104,7 +104,7 @@ export const blogStor = create((set, get) => ({
     try {
       const url = import.meta.env.mode === "development"
         ? `http://localhost:3000/api/auth/comment`
-        : `/api/auth/comment`;
+        : `https://final-project-z6j6.onrender.com/api/auth/comment`;
   
       const response = await axios.post(
         url,
@@ -124,7 +124,7 @@ export const blogStor = create((set, get) => ({
       const url =
         import.meta.env.mode === "development"
           ? `http://localhost:3000/api/auth/comment/${commentId}`
-          : `/api/auth/comment/${commentId}`;
+          : `https://final-project-z6j6.onrender.com/api/auth/comment/${commentId}`;
 
       const response = await axios.delete(url, {
         withCredentials: true,
