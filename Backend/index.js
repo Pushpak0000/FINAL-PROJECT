@@ -14,7 +14,7 @@ const app = express();
 
 
 app.use(cors({
-  origin:"https://final-project-p9rgqg8fc-pushpaks-projects-481b28fb.vercel.app",  // ✅ match frontend port
+  origin:"https://final-project-ruby-phi.vercel.app",  // ✅ match frontend port
   credentials: true,
 }));
 app.use(express.json());
