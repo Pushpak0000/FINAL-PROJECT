@@ -87,12 +87,12 @@ const SinglePage = () => {
   const isOwner = user?._id === singleBlog.createdBy?._id;
 
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
+    <div className="max-w-4xl mx-auto px-4 md:px-6 py-6 mt-10 bg-white shadow-lg rounded-lg">
       {/* ✅ Conditionally show Delete button */}
       {isOwner && (
         <div className="flex justify-end mb-4">
           <button
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition cursor-pointer "
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition cursor-pointer"
             onClick={handleDelete}
           >
             Delete Blog
@@ -100,7 +100,10 @@ const SinglePage = () => {
         </div>
       )}
 
-      <h1 className="text-3xl font-bold mb-4">{singleBlog.title}</h1>
+      <h1 className="text-2xl md:text-3xl font-bold mb-4">
+        {singleBlog.title}
+      </h1>
+
       <div className="text-sm text-gray-500 mb-4">
         Author: {singleBlog.createdBy?.userName || "Unknown"} | Posted on:{" "}
         {new Date(singleBlog.createdAt).toLocaleString()}
@@ -109,11 +112,11 @@ const SinglePage = () => {
       <img
         src={singleBlog.image}
         alt={singleBlog.title}
-        className="w-full h-80 object-fill rounded-lg mb-6"
+        className="w-full h-60 md:h-80 object-cover rounded-lg mb-6"
       />
 
       <div
-        className="prose prose-lg max-w-none mb-10"
+        className="prose prose-sm md:prose-lg max-w-none mb-10"
         dangerouslySetInnerHTML={{ __html: singleBlog.body }}
       />
 

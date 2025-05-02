@@ -10,26 +10,26 @@ const Navbar = () => {
   const { user, logout } = userStore(); // `logout` function should be in `userStore`
 
   return (
-    <nav className="bg-blue-600 p-4 shadow-lg sticky top-0 z-50">
+    <nav className="bg-emerald-50 p-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-xl font-bold cursor-pointer">
-          LikhDe
+          <img src="/logo.png" className="w-full h-10 md:h-10 object-cover rounded-lg"/>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center mx-auto">
-          <NavLink to="/" className="text-white hover:text-gray-200">
+          <NavLink to="/" className="text-black hover:text-amber-950">
             Home
           </NavLink>
-          <NavLink to="/about" className="text-white hover:text-gray-200">
+          <NavLink to="/about" className="text-black hover:text-amber-950">
             About
           </NavLink>
           {user && (
             <>
-              <NavLink to="/post" className="text-white hover:text-gray-200">
-                Post
+              <NavLink to="/post" className="text-black hover:text-amber-950">
+                Blog Post
               </NavLink>
-              <NavLink to="/contact" className="text-white hover:text-gray-200">
+              <NavLink to="/contact" className="text-black hover:text-amber-950">
                 Contact
               </NavLink>
             </>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     onClick={logout}
                     className="w-full px-4 py-2 text-red-600 hover:bg-red-100 transition"
                   >
-                    <LogOut size={20} className="inline-block mr-2" />
+                    <LogOut size={20} className="inline-block mr-2 cursor-pointer" />
                     Logout
                   </button>
                 </motion.div>
@@ -77,7 +77,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-black focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -91,20 +91,20 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden flex flex-col space-y-4 bg-blue-700 p-4 text-center"
+            className="md:hidden flex flex-col space-y-4 bg-emerald-50 p-4 text-center"
           >
-            <Link to="/" className="text-white hover:text-gray-200">
+            <Link to="/" className="text-black hover:text-amber-950">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-gray-200">
+            <Link to="/about" className="text-black hover:text-amber-950">
               About
             </Link>
             {user && (
               <>
-                <Link to="/post" className="text-white hover:text-gray-200">
+                <Link to="/post" className="text-black hover:text-amber-950">
                   Post
                 </Link>
-                <Link to="/contact" className="text-white hover:text-gray-200">
+                <Link to="/contact" className="text-black hover:text-amber-950">
                   Contact
                 </Link>
               </>
