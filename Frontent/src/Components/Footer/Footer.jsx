@@ -39,30 +39,30 @@ const Footer = () => {
         </nav>
 
         <div className="flex space-x-4">
-          <Link
+          <a
             href="https://github.com/Pushpak0000"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
             <FaGithub className="text-2xl" />
-          </Link>
-          <Link
+          </a>
+          <a
             href="https://www.instagram.com/jha___pushpak0000?"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
             <FaInstagram className="text-2xl" />
-          </Link>
-          <Link
-            href="www.linkedin.com/in/pushpak-jha-2005-it"
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pushpak-jha-2005-it"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
             <FaLinkedin className="text-2xl" />
-          </Link>
+          </a>
         </div>
       </div>
 
