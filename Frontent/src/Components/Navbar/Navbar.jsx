@@ -49,7 +49,7 @@ const Navbar = () => {
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <div className="flex items-center space-x-2 cursor-pointer">
-                <User size={28} className="text-white" />
+                <User size={28} className="text-black" />
               </div>
 
               {dropdownOpen && (
